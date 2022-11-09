@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageType>Template</PackageType>
+    <PackageId>Microsoft.Build.Sql.Templates</PackageId>
+    <Title>Microsoft.Build.Sql templates</Title>
+    <Authors>Microsoft</Authors>
+    <Description>Templates for creating new Microsoft.Build.Sql projects.</Description>
+    <PackageProjectUrl>https://github.com/microsoft/dacfx</PackageProjectUrl>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlproject\**" PackagePath="content/" />
+  </ItemGroup>
+
+</Project>
